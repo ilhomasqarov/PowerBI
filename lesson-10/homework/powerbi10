@@ -1,0 +1,67 @@
+1.
+FILTER(Sales, Sales[Amount] > 1000)
+→ Returns a table with only the rows from the Sales table where Amount > 1000.
+
+2.
+
+High Sales = CALCULATE(SUM(Sales[Amount]), FILTER(Sales, Sales[Amount] > 1000))
+
+
+3.
+
+ALL(Sales) removes all filters from the Sales table.
+
+ALLEXCEPT(Sales, Sales[Region]) removes all filters except Region, preserving regional context.
+
+4.
+
+Amount Category = 
+SWITCH(TRUE(),
+    Sales[Amount] > 1000, "High",
+    Sales[Amount] >= 500, "Medium",
+    "Low"
+)
+
+
+5.
+ALLSELECTED returns all values visible through slicers, but respects user selections, unlike ALL, which ignores everything.
+
+6.
+
+Regional Sales % = 
+DIVIDE(
+    SUM(Sales[Amount]),
+    CALCULATE(SUM(Sales[Amount]), ALLEXCEPT(Sales, Sales[Region]))
+)
+
+
+7.
+
+Dynamic Measure = 
+SWITCH(
+    SELECTEDVALUE(Metric[Type]),
+    "Sum", SUM(Sales[Amount]),
+    "Average", AVERAGE(Sales[Amount]),
+    "Count", COUNT(Sales[Amount])
+)
+
+
+8.
+
+Exclude Furniture Sales = 
+CALCULATE(SUM(Sales[Amount]), FILTER(Sales, Products[Category] <> "Furniture"))
+
+
+9.
+ALLSELECTED might behave unexpectedly in a pivot if slicers or visuals are interacting in unexpected ways—like hidden filters still applying behind the scenes.
+
+10.
+
+Total Sales Ignore Region = 
+CALCULATE(SUM(Sales[Amount]), ALL(Sales[Region]))
+
+
+11.
+Optimized version of High Sales:
+
+High Sales = CALCULATE(SUM(Sales[Amount]), Sales[Amount] > 1000)
