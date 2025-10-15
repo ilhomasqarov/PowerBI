@@ -1,0 +1,52 @@
+1. DAX stands for Data Analysis Expressions — it’s the formula language used in Power BI.
+
+2. To sum the Sales column:
+
+Total Sales = SUM(Sales[Sales])
+
+
+3. A calculated column adds data row by row in your table and is stored physically. A measure calculates results on the fly, depending on filters and context, so it’s more dynamic.
+
+4. Calculate Profit Margin safely using DIVIDE:
+
+Profit Margin = DIVIDE(SUM(Sales[Profit]), SUM(Sales[Sales]))
+
+
+5. COUNTROWS() simply counts how many rows are in a table or filtered subset.
+
+6. Total Profit measure subtracting total cost from total sales:
+
+Total Profit = SUM(Sales[Sales]) - SUM(Sales[Cost])
+
+
+7. To find average sales per product:
+
+Average Sales per Product = AVERAGE(Sales[Sales])
+
+
+8. Tag products as “High Profit” if profit is over 1000:
+
+Profit Tag = IF(SUM(Sales[Profit]) > 1000, "High Profit", "Low Profit")
+
+
+9. A circular dependency error happens when a calculated column ends up referring to itself directly or indirectly, causing a loop Power BI can’t resolve.
+
+10.
+
+Row context means Power BI is looking at one row at a time (used in calculated columns).
+
+Filter context means calculations respect filters applied in reports (used in measures).
+
+11. Calculate Year-To-Date (YTD) sales:
+
+YTD Sales = TOTALYTD(SUM(Sales[Sales]), Sales[Date])
+
+
+12. Dynamic measure switching between Sales, Profit, and Margin:
+
+Selected Measure = SWITCH(
+    TRUE(),
+    SELECTEDVALUE(MeasureSelector[Measure]) = "Sales", SUM(Sales[Sales]),
+    SELECTEDVALUE(MeasureSelector[Measure]) = "Profit", SUM(Sales[Profit]),
+    SELECTEDVALUE(MeasureSelector[Measure]) = "Margin", DIVIDE(SUM(Sales[Profit]), SUM(Sales[Sales]))
+)
