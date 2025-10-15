@@ -1,0 +1,31 @@
+1.
+Merge combines columns from two tables based on a key (like a join).
+Append stacks rows from two or more tables (like UNION).
+
+2.
+Select the column > go to Split Column > By Delimiter > choose space (" ") > split into two columns.
+
+3.
+“Pivot Columns” turns unique values in one column into new columns—useful for creating a cross-tab view.
+
+4.
+Click the “X” next to the step in the Applied Steps pane to undo it.
+
+5.
+Reference creates a new query linked to the original (changes affect both).
+Duplicate makes a copy of the query with no link to the original.
+
+6.
+Use Merge Queries > select Orders.csv and Customers.xlsx > match on CustID > choose Inner join.
+
+7.
+Use Pivot Column on Product > set values to Quantity > use Sum as the aggregation.
+
+8.
+Use Append Queries > select Orders_Jan.csv and Orders_Feb.csv > combine as new or existing query.
+
+9.
+Select Email column > Transform > Fill > Down.
+
+10.
+Use Extract > Text After Delimiter with “@” as the delimiter.
