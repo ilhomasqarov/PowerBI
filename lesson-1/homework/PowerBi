@@ -1,0 +1,111 @@
+Power BI is a tool by Microsoft that helps people turn data into interactive visuals and dashboards so they can understand and share insights easily. Think of it as a smarter way to do reporting.
+
+Its three main parts are:
+
+Power BI Desktop – where you build reports on your computer.
+
+Power BI Service – the online platform where you share those reports.
+
+Power BI Mobile – the app that lets you view reports on your phone or tablet.
+
+2. Two business use cases for Power BI dashboards:
+
+A sales team could track monthly performance, top-selling products, or customer trends with live dashboards.
+
+A customer service manager might use Power BI to monitor ticket volume, agent performance, or average resolution time.
+
+3. How do you download and install Power BI Desktop?
+
+It’s easy:
+
+Go to powerbi.microsoft.com
+.
+
+Click Download and choose Power BI Desktop.
+
+You can either get it from the Microsoft Store or download the setup file.
+
+Install it like any other software. Done.
+
+4. What’s the difference between Power BI Desktop and Power BI Service?
+
+Power BI Desktop is for creating reports.
+
+Power BI Service is where you publish and share those reports online.
+
+Desktop is like your workshop; Service is where others see and use what you built.
+
+5. What file extension does Power BI use?
+
+It saves projects as .pbix files.
+
+6. What does Power Query do in Power BI?
+
+Power Query is the tool that helps you clean and prepare your data before it shows up in your reports. So if your data is messy or needs filtering, Power Query handles that part.
+
+7. Why would a business choose Power BI over Excel for reporting?
+
+While Excel is great, Power BI gives you interactive dashboards, real-time data, and can handle much larger datasets more smoothly. It’s better for sharing and automating reports too.
+
+8. What’s one limitation of the free version of Power BI?
+
+With the free version, you can’t share reports with others. Sharing requires a Power BI Pro license.
+
+9. What’s a “published report” in Power BI Service?
+
+That’s just a report you’ve built in Power BI Desktop and uploaded to the cloud (Power BI Service), so others in your team can view or interact with it online.
+
+10. How does Power BI Mobile improve accessibility?
+
+You can check reports on your phone anytime—during meetings, while commuting, or when you're away from your desk. It helps you stay in the loop on the go.
+
+11. Power BI vs Tableau – what are the pros and cons?
+Feature	Power BI	Tableau
+Pros	Affordable, easy to learn, great with Microsoft tools	Amazing visuals, very powerful with large data
+Cons	Can be slow with huge datasets	More expensive, steeper learning curve
+
+Power BI is great for companies already using Microsoft products. Tableau might be better for deep data exploration and visuals.
+
+12. How does Power BI work with Azure services?
+
+It connects really well. You can:
+
+Pull data from Azure SQL or Data Lake,
+
+Use Azure Machine Learning to add predictions,
+
+And analyze big data from Azure Synapse directly.
+
+It’s a smooth combo if you’re in the Microsoft ecosystem.
+
+13. What are gateways in Power BI, and when do you need them?
+
+Gateways act as a bridge between your local data (like on-prem SQL Server) and Power BI in the cloud. You need them when your data isn’t stored online but you still want to refresh it automatically in Power BI.
+
+14. How would you convince a company to adopt Power BI? (ROI answer)
+
+I’d say this: with Power BI, you spend less time creating reports, make faster decisions, and get better visibility into your business without a huge cost. It saves time, reduces manual errors, and gives real-time insights that can boost profits or cut waste. That’s a strong ROI.
+
+15. What security features does Power BI offer for sensitive data?
+
+It’s pretty secure. You get:
+
+Row-Level Security (so people only see what they’re allowed to),
+
+Encryption (for data in transit and at rest),
+
+Sensitivity labels, audit logs, and Azure Active Directory integration.
+
+So it’s safe for handling confidential or regulated data.
+
+Sales Data Quick Recap
+
+OrderID	Product	Quantity	Price	OrderDate
+1001	Laptop	2	1200	1/5/2023
+1002	Mouse	5	25	2/5/2023
+1003	Keyboard	1	80	2/5/2023
+1004	Monitor	1	300	3/5/2023
+1005	Laptop	1	1200	3/5/2023
+ Total revenue = 2400 (Laptop) + 125 (Mouse) + 80 (Keyboard) + 300 (Monitor) + 1200 (Laptop) = $4,105
+
+The Laptop is  best revenue generator.
