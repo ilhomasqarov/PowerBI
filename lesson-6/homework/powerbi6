@@ -1,0 +1,32 @@
+1.
+Bar chart, Line chart, Pie chart
+
+2.
+From the Visualizations pane, click the Slicer icon, then drag a field (e.g., Quarter) into it.
+
+3.
+A bar chart displays horizontal bars; a column chart displays vertical bars. Same data, different orientation.
+
+4.
+Select the visual > go to Format pane > expand Background > toggle it on and choose a color.
+
+5.
+Drill-down lets you click on a visual to explore lower levels of a hierarchy (e.g., from Region → Product → Quarter).
+
+6.
+Select Bar Chart > drag Region to Axis, SalesAmount to Values.
+
+7.
+Add a slicer > drag Quarter into it. It will filter all visuals by default unless sync settings are changed.
+
+8.
+Select the bar chart > go to Format pane > turn on Data labels under the "Data labels" section.
+
+9.
+Select Line Chart > add Quarter to Axis, SalesAmount to Values.
+
+10.
+Drag Product to the Tooltip field well of the bar chart.
+
+11.
+Go to View > Sync Slicers, then choose which pages to sync the slicer across.
