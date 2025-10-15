@@ -1,0 +1,40 @@
+2.
+
+One-to-many (1:*): Most common
+
+Many-to-many (:)
+
+3.
+Go to Model view, drag a column (e.g., CustomerID) from one table to the matching column in another.
+
+4.
+A star schema is a data model with a central fact table connected to multiple dimension tables.
+
+5.
+The Sales table—it holds transactional data like orders, quantities, and prices.
+
+6.
+Create a relationship from Sales.CustomerID to Customers.CustomerID, with one-to-many direction.
+
+7.
+Because it links to the Products table—ProductID in Sales references ProductID in Products (foreign key).
+
+8.
+Change one of the ProductID columns so both have the same data type (e.g., text or whole number).
+
+9.
+Star schemas reduce complexity, minimize joins, and improve performance by simplifying relationships.
+
+11.
+Break circular relationships by:
+
+Removing unnecessary relationships
+
+Using DAX functions like USERELATIONSHIP instead of physical relationships
+
+
+13.
+Use a bridge table (e.g., CustomerProduct interactions) to break the many-to-many link into two one-to-many relationships.
+
+14.
+Only when filters from both sides are truly needed—for example, filter propagation in complex slicers or reporting scenarios.
