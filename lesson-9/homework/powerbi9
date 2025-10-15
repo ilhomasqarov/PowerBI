@@ -1,0 +1,49 @@
+1.
+Row context means DAX processes one row at a time, usually in calculated columns.
+Example: In a calculated column, TotalPrice = Sales[Quantity] * Sales[UnitPrice] calculates for each row individually.
+
+2.
+
+Total Sales = SUM(Sales[Sales])
+
+
+3.
+
+Customer Name = RELATED(Customers[Name])
+
+
+(This pulls the customer’s name into the Sales table based on a relationship.)
+
+4.
+
+CALCULATE(SUM(Sales[Quantity]), Sales[Category] = "Electronics")
+
+
+Returns the total quantity sold where Category is Electronics, applying a filter.
+
+5.
+
+VAR defines variables to store intermediate values or tables.
+
+RETURN outputs the final result using those variables.
+
+6.
+Calculated column example:
+
+TotalPrice = Sales[Quantity] * Sales[UnitPrice]
+
+
+7.
+Measure for Electronics Sales:
+
+Electronics Sales = CALCULATE(SUM(Sales[Sales]), Sales[Category] = "Electronics")
+
+
+8.
+Measure ignoring category filters:
+
+Total Sales All Categories = CALCULATE(SUM(Sales[Sales]), ALL(Sales[Category]))
+
+
+9.
+If RELATED(Customers[Region]) returns blanks, likely the relationship between Sales and Customers tables is missing or inactive.
